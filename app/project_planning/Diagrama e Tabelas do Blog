@@ -1,0 +1,69 @@
+// Tabelas e Diagramas do Blog
+// https://dbdiagram.io/d/66cdccfecf8e2d1d1cfeb6bf
+
+Table users {
+  id integer [primary key]
+  email varchar [unique, not null]
+  encrypted_password varchar [not null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table profiles {
+  id integer [primary key]
+  user_id integer [note: 'Foreign key to users']
+  name varchar [not null]
+  date_of_birth date [not null]
+  avatar varchar [note: 'Path to the avatar image']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table categories {
+  id integer [primary key]
+  title varchar [not null]
+  description text [not null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table posts {
+  id integer [primary key]
+  title varchar [not null]
+  description text [not null, note: 'Content of the post']
+  user_id integer [note: 'Foreign key to users']
+  category_id integer [note: 'Foreign key to categories']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table comments {
+  id integer [primary key]
+  description text [note: 'Content of the comment']
+  user_id integer [note: 'Foreign key to users']
+  post_id integer [note: 'Foreign key to posts']
+  created_at timestamp
+  updated_at timestamp
+}
+
+// Essas referências descrevem as relações entre as tabelas:
+
+// (um usuário pode ter muitos posts)
+Ref: posts.user_id > users.id        // many-to-one
+
+// (uma categoria pode ter muitos posts)
+Ref: posts.category_id > categories.id // many-to-one
+
+// (um usuário pode ter muitos comentários)
+Ref: comments.user_id > users.id     // many-to-one
+
+// (um post pode ter muitos comentários)
+Ref: comments.post_id > posts.id     // many-to-one
+
+// (um usuário tem um perfil)
+Ref: profiles.user_id > users.id     // one-to-one
+
+
+
+
+
