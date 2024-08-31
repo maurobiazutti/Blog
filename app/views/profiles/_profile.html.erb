@@ -14,4 +14,6 @@
     <%= profile.user_id %>
   </p>
 
+  <%= link_to image_tag(profile.avatar, style: "width: 150px; heigth: 150px;"), profile.avatar if profile.avatar.attached? %>
+
 </div>

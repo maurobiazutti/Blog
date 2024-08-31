@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+ /* app/assets/stylesheets/application.css */
+
+/* Navbar */
+/* Estilizando links como botões */
+/* Estilizando links como botões */
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Estilizando links como botões */
+.navbar a.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar a.button-link:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+.text-white {
+  color: white;
+}
+
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 60px;               /* Ajustado para começar abaixo da navbar */
+  left: 0;
+  width: 200px;
+  height: calc(100% - 60px); /* O menu ocupa o restante da tela */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Container */
+.container {
+  margin-left: 230px; /* Deixa espaço para o menu */
+  padding-top: 80px;  /* Deixa espaço para a navbar */
+  background-color: rgb(149, 202, 248);
+}
+
+/* Body */
+.main {
+  font-family: Arial, sans-serif;
+  background-color: #ee5c5c;
+}

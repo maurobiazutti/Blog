@@ -1,0 +1,8 @@
+<menu class="menu">
+  <h3>Categorias</h3>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= link_to category.title, category %></li>
+    <% end %>
+  </ul>
+</menu>

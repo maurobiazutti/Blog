@@ -1,11 +1,16 @@
-<nav>
+<nav class="navbar">
   <%= link_to 'Home', root_path %> |
   <% if user_signed_in? %>
     <%= link_to 'Posts', posts_path %> |
-    <%= link_to 'Sign out', destroy_user_session_path, data: {turbo_method: :delete} %> |
-    <%= current_user.email %>
+    <%= link_to 'Profiles', profiles_path %> |
+    <%= link_to 'Categorias', categories_path %> |
+
+
+    <%= link_to 'Sign out', destroy_user_session_path, data: {turbo_method: :delete}, class: 'button-link' %> |
+    <!-- <%= current_user.email %> -->
+    <span class="text-white"><%= current_user.email %></span>
   <%else%>
-    <%= link_to 'Login', new_user_session_path %>
+    <%= link_to 'Login', new_user_session_path, class: 'button-link' %>
   <% end %>
 </nav>
 
