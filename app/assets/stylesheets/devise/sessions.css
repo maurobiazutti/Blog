@@ -1,0 +1,82 @@
+/* Estilização geral do form */
+.form {
+  justify-self: center;
+  align-self: center; 
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilização dos campos */
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Checkbox "remember me" */
+.field input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Botão de envio */
+.actions input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Links abaixo do form */
+.users-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.users-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.users-links a:hover {
+  text-decoration: underline;
+}

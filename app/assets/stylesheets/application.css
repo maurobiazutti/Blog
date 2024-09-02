@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
  
  
 /* app/assets/stylesheets/application.css */
@@ -42,40 +42,7 @@
   grid-column-end: 5;
  }
 
-/* Navbar */
-.navbar {
-  background-color: #333;
-  padding: 10px;
-}
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: inline-block;
-}
-
-.navbar a:hover {
-  background-color: #555;
-}
-
-/* Estilizando links como botões */
-.navbar a.button-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.navbar a.button-link:hover {
-  background-color: #0056b3;
-  text-decoration: none;
-}
 
 .text-white {
   color: white;
@@ -98,57 +65,56 @@
  
 /* Estilo para o contêiner geral */
 .card {
-  background-color: #f8f9fa;         /* Cor de fundo clara */
-  padding: 20px;                     /* Espaçamento interno */
-  border-radius: 10px;               /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
-} 
-
+  background-color: #f8f9fa;         
+  padding: 20px;                     
+  border-radius: 10px;              
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
 /* Estilo para cada post individual */
 /* Estilo do link que envolve o post card */
 .post-card-link {
-  text-decoration: none;             /* Remove sublinhado do link */
-  display: block;                    /* Faz o link ocupar toda a área do cartão */
-  color: inherit;                    /* Mantém a cor do texto original */
+  text-decoration: none;            
+  display: block;                   
+  color: inherit;                    
 }
 
 /* Estilo do post card */
 .post-card {
-  background-color: #fff;            /* Cor de fundo do cartão */
-  border-radius: 8px;                /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-bottom: 20px;               /* Espaço entre os cartões */
-  padding: 20px;                     /* Espaçamento interno */
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transição suave */
+  background-color: #fff;            
+  border-radius: 8px;                
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px;               
+  padding: 20px;                     
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; 
 }
 
 /* Efeito de hover para o post card */
 .post-card-link:hover .post-card {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada no hover */
-  background-color: #f8f9fa;                /* Leve mudança na cor de fundo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+  background-color: #f8f9fa;                
 }
 
 .btn-new-post {
-  display: inline-block;            /* Faz com que o link se comporte como um botão */
-  background-color: #28a745;        /* Cor de fundo (verde) */
-  color: white;                     /* Cor do texto */
+  display: inline-block;            
+  background-color: #28a745;        
+  color: white;                     
   margin: 20px;
-  padding: 10px 20px;               /* Espaçamento interno */
-  text-align: center;               /* Centraliza o texto */
-  text-decoration: none;            /* Remove o sublinhado */
-  border-radius: 5px;               /* Bordas arredondadas */
-  font-weight: bold;                /* Texto em negrito */
-  transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+  padding: 10px 20px;               
+  text-align: center;               
+  text-decoration: none;            
+  border-radius: 5px;               
+  font-weight: bold;                
+  transition: background-color 0.3s ease; 
 }
 
 /* Efeito hover para o botão */
 .btn-new-post:hover {
-  background-color: #218838;        /* Cor de fundo mais escura no hover */
+  background-color: #218838;        
 }
 
 .footer {
   grid-column-start: 1;
   grid-column-end: 5;
-  background-color: aquamarine;
+  background-color: rgb(127, 182, 255);
   height: 50px;
 }
