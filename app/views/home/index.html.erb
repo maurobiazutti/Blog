@@ -4,6 +4,25 @@
   <h1>Home</h1>
 
 
+  <%= link_to "New post", new_post_path, class: 'btn-new-post' %>
+
+
+  <div id="posts" class="card">
+    <% @posts.each do |post| %>
+      <%= link_to post_path(post), class: 'post-card-link' do %>
+        <div class="post-card">
+          <%= render post %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  
+
+
+
+  
+  
+  <!-- <%= link_to "New post", new_post_path %> -->
 
 
 </div>

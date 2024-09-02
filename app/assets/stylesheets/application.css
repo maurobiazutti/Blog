@@ -13,13 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+/* app/assets/stylesheets/application.css */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
 
- /* app/assets/stylesheets/application.css */
+ /* Body */
+ .main {
+   font-family: Arial, sans-serif;
+   background-color: #ee5c5c;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+ }
+
+ .header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+ }
 
 /* Navbar */
-/* Estilizando links como botões */
-/* Estilizando links como botões */
-
 .navbar {
   background-color: #333;
   padding: 10px;
@@ -58,30 +81,74 @@
   color: white;
 }
 
-
 /* Menu */
 .menu {
-  position: fixed;
-  top: 60px;               /* Ajustado para começar abaixo da navbar */
-  left: 0;
-  width: 200px;
-  height: calc(100% - 60px); /* O menu ocupa o restante da tela */
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-}
+  grid-column-start: 1;
+  grid-column-end: 1;
+  height: 100vh;
+  background-color: #776969;
+} 
 
 /* Container */
 .container {
-  margin-left: 230px; /* Deixa espaço para o menu */
-  padding-top: 80px;  /* Deixa espaço para a navbar */
+  grid-column-start: 2;
+  grid-column-end: 4;
   background-color: rgb(149, 202, 248);
 }
+ 
+/* Estilo para o contêiner geral */
+.card {
+  background-color: #f8f9fa;         /* Cor de fundo clara */
+  padding: 20px;                     /* Espaçamento interno */
+  border-radius: 10px;               /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+} 
 
-/* Body */
-.main {
-  font-family: Arial, sans-serif;
-  background-color: #ee5c5c;
+/* Estilo para cada post individual */
+/* Estilo do link que envolve o post card */
+.post-card-link {
+  text-decoration: none;             /* Remove sublinhado do link */
+  display: block;                    /* Faz o link ocupar toda a área do cartão */
+  color: inherit;                    /* Mantém a cor do texto original */
+}
+
+/* Estilo do post card */
+.post-card {
+  background-color: #fff;            /* Cor de fundo do cartão */
+  border-radius: 8px;                /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px;               /* Espaço entre os cartões */
+  padding: 20px;                     /* Espaçamento interno */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover para o post card */
+.post-card-link:hover .post-card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada no hover */
+  background-color: #f8f9fa;                /* Leve mudança na cor de fundo */
+}
+
+.btn-new-post {
+  display: inline-block;            /* Faz com que o link se comporte como um botão */
+  background-color: #28a745;        /* Cor de fundo (verde) */
+  color: white;                     /* Cor do texto */
+  margin: 20px;
+  padding: 10px 20px;               /* Espaçamento interno */
+  text-align: center;               /* Centraliza o texto */
+  text-decoration: none;            /* Remove o sublinhado */
+  border-radius: 5px;               /* Bordas arredondadas */
+  font-weight: bold;                /* Texto em negrito */
+  transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Efeito hover para o botão */
+.btn-new-post:hover {
+  background-color: #218838;        /* Cor de fundo mais escura no hover */
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: aquamarine;
+  height: 50px;
 }

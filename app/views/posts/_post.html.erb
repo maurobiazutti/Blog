@@ -11,6 +11,13 @@
 
   <p>
     <strong>User:</strong>
-    <%= @post.user.email %>
+    <%= post.user.email %>
   </p>
+
+  <p>
+    <strong>Data:</strong>
+    <%= post.created_at.strftime("%e/%m/%Y") %>
+  </p>
+  
+
 </div>
